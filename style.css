@@ -1,124 +1,212 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma,sans-serif;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f7f3ed;
-  color: #2b1b12;
-  direction: rtl;
+body{
+    background:#f8f4ec;
+    color:#333;
 }
 
-header {
-  background: #3b1712;
-  color: white;
-  text-align: center;
-  padding: 35px 15px;
+/* ===== Header ===== */
+
+header{
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("images/mashwyat.JPG");
+    background-size:cover;
+    background-position:center;
+    height:300px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
 }
 
-header h1 {
-  font-size: 34px;
-  margin-bottom: 8px;
+.logo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:4px solid white;
+    margin-bottom:15px;
 }
 
-header p {
-  font-size: 18px;
-  color: #e7c99c;
+header h1{
+    font-size:40px;
+    margin-bottom:10px;
 }
 
-main {
-  width: 92%;
-  max-width: 900px;
-  margin: 30px auto;
+header p{
+    font-size:20px;
 }
 
-h2 {
-  text-align: center;
-  font-size: 27px;
-  margin-bottom: 25px;
-  color: #3b1712;
+/* ===== العنوان ===== */
+
+.title{
+    margin:40px 0;
+    text-align:center;
 }
 
-.categories {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+.title h2{
+    font-size:35px;
+    color:#8a5a16;
 }
 
-.category {
-  background: white;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
-  cursor: pointer;
-  transition: 0.2s;
+/* ===== الكروت ===== */
+
+.categories{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    padding:30px;
+
 }
 
-.category:active {
-  transform: scale(0.97);
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:.3s;
+
 }
 
-.category img {
-  width: 100%;
-  height: 145px;
-  object-fit: cover;
-  display: block;
+.card:hover{
+
+    transform:translateY(-8px);
+
 }
 
-.category h3 {
-  text-align: center;
-  padding: 14px 5px;
-  font-size: 19px;
-  color: #3b1712;
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
 }
 
-footer {
-  text-align: center;
-  padding: 30px 10px;
-  margin-top: 40px;
-  background: #3b1712;
-  color: #e7c99c;
+.card a{
+
+    text-decoration:none;
+
+    color:black;
+
 }
 
-@media (min-width: 700px) {
-  .categories {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.card span{
 
-  .category img {
-    height: 190px;
-  }
-}
-.menu-list {
-    width: 95%;
-    max-width: 700px;
-    margin: 30px auto;
-}
+    display:block;
 
-.menu-item {
-    background: #ffffff;
-    margin-bottom: 15px;
-    padding: 18px;
-    border-radius: 12px;
-    border-right: 6px solid #c9a227;
-    box-shadow: 0 3px 10px rgba(0,0,0,.08);
-    font-size: 20px;
-    color: #2b1b12;
-    transition: .3s;
+    padding:18px;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    color:#8a5a16;
+
 }
 
-.menu-item:hover {
-    transform: translateY(-3px);
+/* ===== صفحات الأصناف ===== */
+
+.menu-page{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:40px 20px;
+
 }
 
-.back-btn {
-    display: inline-block;
-    margin: 25px auto;
-    padding: 12px 25px;
-    background: #3b1712;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
+.menu-page h1{
+
+    text-align:center;
+
+    font-size:50px;
+
+    color:#8a5a16;
+
+    margin-bottom:15px;
+
+}
+
+.menu-page h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#444;
+
+    font-size:22px;
+
+}
+
+.menu-list{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+}
+
+.menu-list li{
+
+    list-style:none;
+
+    padding:15px;
+
+    font-size:26px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.menu-list li:last-child{
+
+    border:none;
+
+}
+
+.back{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:12px 25px;
+
+    background:#8a5a16;
+
+    color:white;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-size:22px;
+
 }
