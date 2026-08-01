@@ -91,3 +91,34 @@ footer {
     height: 190px;
   }
 }
+.menu-list {
+    width: 95%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.menu-item {
+    background: #ffffff;
+    margin-bottom: 15px;
+    padding: 18px;
+    border-radius: 12px;
+    border-right: 6px solid #c9a227;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    font-size: 20px;
+    color: #2b1b12;
+    transition: .3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+}
+
+.back-btn {
+    display: inline-block;
+    margin: 25px auto;
+    padding: 12px 25px;
+    background: #3b1712;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
