@@ -279,3 +279,48 @@ header p{
     color:#fff;
     transform:translateY(-3px);
 }
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.social-item{
+    text-decoration:none;
+    color:#14352d;
+    text-align:center;
+}
+
+.icon{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.icon:hover{
+    background:#b17820;
+    transform:translateY(-5px);
+}
+
+.social-item span{
+    display:block;
+    margin-top:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.phone-number{
+    margin-top:35px;
+    font-size:28px;
+    font-weight:bold;
+    color:#b17820;
+}
