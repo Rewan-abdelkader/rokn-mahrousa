@@ -282,15 +282,19 @@ header p{
 .social-links{
     display:flex;
     justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-top:25px;
+    align-items:center;
+    gap:35px;
+    flex-wrap:nowrap;
+    margin:30px auto;
+    overflow-x:auto;
+    padding:10px;
 }
 
 .social-item{
     text-decoration:none;
     color:#14352d;
     text-align:center;
+    min-width:90px;
 }
 
 .icon{
