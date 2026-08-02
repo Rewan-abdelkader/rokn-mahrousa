@@ -350,3 +350,15 @@ header p{
 .facebook-icon{
     color:#1877F2;
 }
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+a:visited{
+    color:inherit;
+}
+
+a:hover{
+    color:inherit;
+}
