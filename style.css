@@ -339,3 +339,14 @@ header p{
     font-weight:bold;
     color:var(--gold)
 }
+.phone-icon{
+    color:#b17820;
+}
+
+.whatsapp-icon{
+    color:#25D366;
+}
+
+.facebook-icon{
+    color:#1877F2;
+}
