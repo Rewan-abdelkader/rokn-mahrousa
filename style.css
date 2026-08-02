@@ -82,6 +82,14 @@ header p{
     margin:20px auto 0;
     border-radius:20px;
 }
+.header-phone{
+    margin-top:18px;
+    color:var(--white);
+    font-size:20px;
+    font-weight:500;
+    letter-spacing:1px;
+    opacity:.95;
+}
 /* ===== العنوان ===== */
 
 .title{
