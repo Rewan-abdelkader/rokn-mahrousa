@@ -201,3 +201,10 @@ header p{
     text-decoration:none;
     font-size:22px;
 }
+.gold-line{
+    width:120px;
+    height:3px;
+    background:#b17820;
+    margin:25px auto 35px;
+    border-radius:50px;
+}
