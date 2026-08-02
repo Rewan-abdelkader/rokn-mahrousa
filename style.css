@@ -301,11 +301,15 @@ header p{
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:35px;
     box-shadow:0 8px 18px rgba(0,0,0,.15);
     transition:.3s;
-}
 
+    color:#b17820;
+    font-size:32px;
+}
+.icon i{
+    font-size:32px;
+}
 .icon:hover{
     background:#b17820;
     transform:translateY(-5px);
