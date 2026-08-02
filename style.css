@@ -83,12 +83,12 @@ header p{
     border-radius:20px;
 }
 .header-phone{
-    margin-top:18px;
-    color:#ffffff;
-    font-size:16px;
+    margin-top:14px;
+    color:#fff;
+    font-size:15px;
     font-weight:400;
     letter-spacing:2px;
-    opacity:.9;
+    opacity:.85;
 }
 /* ===== العنوان ===== */
 
@@ -270,9 +270,9 @@ header p{
 
 .contact-box h3{
     color:var(--gold);
-    font-size:24px;
-    margin-bottom:15px;
-    font-weight:bold;
+    font-size:20px;
+    margin-bottom:18px;
+    font-weight:600;
 }
 
 .contact-btn{
@@ -311,14 +311,14 @@ header p{
 }
 
 .icon{
-    width:48px;
-    height:48px;
+    width:44px;
+height:44px;
     border-radius:50%;
     background:#fff;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:22px;
+    font-size:20px;
     box-shadow:0 6px 15px rgba(0,0,0,.12);
     transition:.3s;
 }
@@ -331,7 +331,7 @@ header p{
 .social-item span{
     display:block;
     margin-top:6px;
-    font-size:13px;
+    font-size:12px;
     font-weight:600;
     color:var(--green);
     line-height:1.3;
