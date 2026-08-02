@@ -269,9 +269,10 @@ header p{
 }
 
 .contact-box h3{
-    color:var(--gold)
-    font-size:32px;
-    margin-bottom:20px;
+    color:var(--gold);
+    font-size:24px;
+    margin-bottom:15px;
+    font-weight:bold;
 }
 
 .contact-btn{
