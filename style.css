@@ -13,35 +13,33 @@ body{
 /* ===== Header ===== */
 
 header{
-    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("images/mashwyat.JPG");
-    background-size:cover;
-    background-position:center;
-    height:380px;
+    background:#f8f4ec;
+    height:420px;
 
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
 
-    color:white;
+    color:#8a5a16;
 }
-
 .logo{
-    width:140px;
-height:140px;
-    border-radius:50%;
-    border:4px solid white;
-    margin-bottom:15px;
-}
-
-header h1{
-    font-size:40px;
-    margin-bottom:10px;
+    width:220px;
+    height:220px;
+    object-fit:contain;
+    margin-bottom:20px;
 }
 
 header p{
-    font-size:20px;
+    font-size:26px;
+    color:#555;
+}
+
+header h1{
+    font-size:60px;
+    margin-bottom:10px;
+    color:#8a5a16;
+    font-weight:bold;
 }
 
 /* ===== العنوان ===== */
