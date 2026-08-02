@@ -53,7 +53,14 @@ header h1{
     font-size:35px;
     color:#8a5a16;
 }
-
+.subtitle{
+    text-align:center;
+    font-size:22px;
+    color:#666;
+    margin-top:10px;
+    margin-bottom:35px;
+    font-weight:500;
+}
 /* ===== الكروت ===== */
 
 .categories{
