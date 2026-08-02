@@ -308,19 +308,17 @@ header p{
 }
 
 .icon{
-    width:58px;
-    height:58px;
+    width:48px;
+    height:48px;
     border-radius:50%;
-    background:var(--white);
+    background:#fff;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:28px;
-    color:var(--gold);
-    box-shadow:0 8px 18px rgba(0,0,0,.12);
+    font-size:22px;
+    box-shadow:0 6px 15px rgba(0,0,0,.12);
     transition:.3s;
 }
-
 .icon:hover{
     background:var(--gold);
     color:var(--white);
