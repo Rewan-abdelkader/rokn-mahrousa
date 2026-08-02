@@ -250,7 +250,7 @@ header p{
 .gold-line{
     width:120px;
     height:3px;
-    background:var(--gold)
+    background:var(--gold);
     margin:25px auto 35px;
     border-radius:50px;
 }
@@ -279,7 +279,7 @@ header p{
     display:block;
     text-decoration:none;
     background:#fff;
-    color:var(--green)
+    color:var(--green);
     padding:16px;
     margin:15px 0;
     border-radius:50px;
@@ -290,7 +290,7 @@ header p{
 }
 
 .contact-btn:hover{
-    background:var(--gold)
+    background:var(--gold);
     color:#fff;
     transform:translateY(-3px);
 }
@@ -303,8 +303,11 @@ header p{
 }
 
 .social-item{
-    width:70px;
+    width:65px;
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .icon{
