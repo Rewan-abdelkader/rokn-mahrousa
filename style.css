@@ -13,28 +13,68 @@ body{
 /* ===== Header ===== */
 
 header{
-    background:#14352d;
-    padding:50px 20px;
+    position:relative;
+    height:420px;
+    overflow:hidden;
     text-align:center;
-    color:white;
 }
-.logo{
+
+.header-bg{
     width:100%;
-    max-width:600px;
-    height:auto;
+    height:100%;
+    object-fit:cover;
+    opacity:.28;
     display:block;
-    margin:0 auto 20px;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#14352d;
+    opacity:.88;
+}
+
+.header-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    z-index:2;
+}
+
+.logo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    margin:auto;
+    display:block;
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
 header h1{
-    font-size:70px;
-    color:#b17820;
-    margin-top:15px;
+    font-size:60px;
+    color:#c8912f;
+    margin:10px 0;
 }
 
 header p{
     font-size:28px;
-    color:#ddd;
+    color:#fff;
+}
+
+.gold-line{
+    width:120px;
+    height:5px;
+    background:#c8912f;
+    margin:20px auto 0;
+    border-radius:20px;
 }
 /* ===== العنوان ===== */
 
