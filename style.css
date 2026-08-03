@@ -211,18 +211,14 @@ header p{
 
 }
 
-.menu-list{
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:25px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.1);
-
+.menu-list li{
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8px;
+    border-bottom:1px solid #ececec;
 }
-
 .menu-list li{
 
     list-style:none;
