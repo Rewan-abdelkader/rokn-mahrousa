@@ -98,10 +98,18 @@
     </div>
 
     <!-- سكريبت جلب البيانات أوتوماتيك من ملف الإكسيل على جوجل -->
+    } catch (error) {
+    console.error("خطأ في جلب البيانات:", error);
+    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: red;">تأكد من إذن المشاركة العامة لملف الإكسيل</td></tr>';
+    }
+    }
+
+    loadMenuFromSheet();
+    </script>
     <script>
-        // حطي رابط ملف الجوجل إكسيل هنا بين العلامتين
-        const SHEET_URL = "[https://docs.google.com/spreadsheets/d/1msXFrpGok_tc3eRRQaFSdFgTaW69ZwPrcv-yllH0Pgc/edit?usp=sharing]";
-ا
+        // حطي رابط ملف الإكسيل هنا
+        const SHEET_URL = "[رابط_ملف_الإكسيل_هنا]";
+
         async function loadMenuFromSheet() {
         const tbody = document.getElementById('table-body');
         try {
@@ -110,45 +118,47 @@
         return;
         }
 
-        // تحويل رابط جوجل إكسيل إلى رابط تحميل CSV مباشر
         let csvUrl = SHEET_URL;
         if (csvUrl.includes('/edit')) {
         csvUrl = csvUrl.replace(/\/edit.*$/, '/export?format=csv');
         }
 
         const response = await fetch(csvUrl);
-        if (!response.ok) throw new Error('فشل الاتصال بملف البيانات');
-
         const data = await response.text();
-        const rows = data.split('\n').map(row => row.split(','));
 
+        // تقسيم السطور بشكل صحيح مع مراعاة علامات التنسيق
+        const rows = data.split(/\r?\n/);
         tbody.innerHTML = '';
 
         let foundItems = false;
-        // يبدأ من الصف الثاني لتخطي العناوين
         for (let i = 1; i < rows.length; i++) {
-        const cols = rows[i];
-        // التأكد من أن الصف يحتوي على بيانات وأن القسم هو edamat
-        if (cols.length >= 5 && cols[0].trim().toLowerCase().includes('edamat')) {
+        const row = rows[i].trim();
+        if (!row) continue;
+
+        // تحليل الأعمدة بفصل الفواصل بدقة
+        const cols = row.split(',').map(item => item.replace(/^["']|["']$/g, '').trim());
+
+        // التأكد أن الصف يخص قسم edamat وأن البيانات كاملة
+        if (cols.length >= 5 && cols[0].toLowerCase() === 'edamat') {
         foundItems = true;
         const tr = document.createElement('tr');
         tr.innerHTML = `
-        <td>${cols[2] ? cols[2].trim() : '-'}</td>
-        <td>${cols[1] ? cols[1].trim() : '-'}</td>
-        <td>${cols[3] ? cols[3].trim() : '-'}</td>
-        <td>${cols[4] ? cols[4].trim() : '-'}</td>
+        <td>${cols[2] || '-'}</td>
+        <td>${cols[1] || '-'}</td>
+        <td>${cols[3] || '-'}</td>
+        <td>${cols[4] || '-'}</td>
         `;
         tbody.appendChild(tr);
         }
         }
 
         if (!foundItems) {
-        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px;">لم يتم العثور على أصناف مطابقة لهذا القسم</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px;">لا توجد أصناف مطابقة</td></tr>';
         }
 
         } catch (error) {
-        console.error("خطأ في جلب البيانات:", error);
-        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: red;">تأكد من إذن المشاركة العامة لملف الإكسيل</td></tr>';
+        console.error("خطأ:", error);
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: red;">تعذر تحميل البيانات، تأكد من الرابط</td></tr>';
         }
         }
 
