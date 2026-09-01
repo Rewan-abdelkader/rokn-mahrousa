@@ -81,17 +81,27 @@
             .menu-table th {
                 background-color: #b89750;
                 color: #fff;
-                padding: 14px 8px;
-                font-size: 1.05rem;
+                padding: 12px 6px;
+                font-size: 1rem;
                 font-weight: bold;
+                border-left: 1px solid rgba(255,255,255,0.2);
             }
 
+                .menu-table th:first-child {
+                    border-left: none;
+                }
+
             .menu-table td {
-                padding: 12px 8px;
+                padding: 12px 6px;
                 border-bottom: 1px solid #d4c8b0;
+                border-left: 1px solid rgba(212, 200, 176, 0.4);
                 color: #2c1d0c;
                 font-size: 1rem;
             }
+
+                .menu-table td:first-child {
+                    border-left: none;
+                }
 
             .menu-table tr:hover {
                 background-color: rgba(184, 151, 80, 0.08);
@@ -130,30 +140,58 @@
             <table class="menu-table">
                 <thead>
                     <tr>
-                        <th>السعرات</th>
-                        <th>اسم الصنف</th>
-                        <th>نص</th>
-                        <th>ربع (صدر/ورك)</th>
+                        <th colspan="2">ربع</th>
+                        <th rowspan="2">نص</th>
+                        <th rowspan="2">اسم الصنف</th>
+                        <th rowspan="2">السعرات الحرارية</th>
+                    </tr>
+                    <tr>
+                        <th>ورك</th>
+                        <th>صدر</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>550</td>
-                        <td>دجاج فرن</td>
+                        <td>15</td>
+                        <td>14</td>
                         <td>25</td>
-                        <td>15 / 14</td>
+                        <td>دجاج فرن</td>
+                        <td>550</td>
                     </tr>
                     <tr>
-                        <td>500</td>
+                        <td>15</td>
+                        <td>13</td>
+                        <td>19</td>
                         <td>دجاج محمر</td>
-                        <td>19</td>
-                        <td>15 / 13</td>
+                        <td>500</td>
                     </tr>
                     <tr>
-                        <td>450</td>
-                        <td>دجاج شواية</td>
+                        <td>15</td>
+                        <td>13</td>
                         <td>19</td>
-                        <td>15 / 13</td>
+                        <td>دجاج شواية</td>
+                        <td>450</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>8</td>
+                        <td>-</td>
+                        <td>دجاج فرن سادة</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>8</td>
+                        <td>-</td>
+                        <td>دجاج محمر سادة</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>13</td>
+                        <td>19</td>
+                        <td>دجاج فحم</td>
+                        <td>550</td>
                     </tr>
                 </tbody>
             </table>
