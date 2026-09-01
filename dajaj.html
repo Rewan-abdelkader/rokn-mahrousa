@@ -1,43 +1,150 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الدجاج | ركن المحروسة</title>
-
     <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 25px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
+            .menu-table th {
+                background-color: #b89750;
+                color: #fff;
+                padding: 14px 8px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+                vertical-align: middle;
+            }
+
+                .menu-table th:first-child {
+                    border-left: none;
+                }
+
+            .menu-table td {
+                padding: 14px 8px;
+                border-bottom: 1px solid #d4c8b0;
+                color: #2c1d0c;
+                font-size: 1.05rem;
+                border-left: 1px solid rgba(212, 200, 176, 0.5);
+                vertical-align: middle;
+            }
+
+                .menu-table td:first-child {
+                    border-left: none;
+                }
+
+                .menu-table td:nth-child(2) {
+                    font-weight: 600;
+                    color: #1a1107;
+                }
+
+            .menu-table tr:hover {
+                background-color: rgba(184, 151, 80, 0.08);
+                transition: background-color 0.3s ease;
+            }
+
+        .sub-th {
+            font-size: 0.85rem;
+            font-weight: normal;
+            opacity: 0.9;
+            display: block;
+            margin-top: 3px;
+        }
+
+        .banner-title h1 {
+            font-size: 2.3rem;
+        }
+
+        .menu-title {
+            font-size: 2rem;
+            margin: 25px 0 10px 0;
+            color: #2c1d0c;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
 
-<div class="menu-page">
+    <div class="menu-page">
+        <div class="page-banner">
+            <img src="dajaj.JPG" alt="الدجاج">
+            <div class="banner-title">
+                <h1>الدجاج</h1>
+            </div>
+        </div>
 
-<h1>🍗 الدجاج</h1>
+        <h2 class="menu-title">قسم الدجاج</h2>
 
-<h2>ركن المحروسة</h2>
+        <div class="menu-list">
+            <table class="menu-table">
+                <tr>
+                    <th rowspan="2">السعرات الحرارية</th>
+                    <th rowspan="2">اسم الصنف</th>
+                    <th rowspan="2">نص</th>
+                    <th colspan="2">ربع</th>
+                </tr>
+                <tr>
+                    <th><span class="sub-th">ورك</span></th>
+                    <th><span class="sub-th">صدر</span></th>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>دجاج فرن</td>
+                    <td>25</td>
+                    <td>15</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>دجاج محمر</td>
+                    <td>19</td>
+                    <td>15</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>دجاج شواية</td>
+                    <td>19</td>
+                    <td>15</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>دجاج فرن سادة</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>600</td>
+                    <td>دجاج محمر سادة</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>دجاج فحم</td>
+                    <td>19</td>
+                    <td>15</td>
+                    <td>13</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="menu-list">
-
-<ul>
-
-<li>دجاج فحم</li>
-<li>دجاج فحم سادة</li>
-<li>دجاج شواية</li>
-<li>دجاج شواية سادة</li>
-<li>دجاج محمر</li>
-<li>دجاج محمر سادة</li>
-<li>دجاج فرن</li>
-<li>دجاج فرن سادة</li>
-
-</ul>
-
-</div>
-
-<a href="index.html" class="back">⬅ العودة للرئيسية</a>
-
-</div>
+        <a href="index.html" class="back">← العودة للرئيسية</a>
+    </div>
 
 </body>
-
 </html>
