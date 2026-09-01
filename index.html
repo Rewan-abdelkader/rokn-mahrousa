@@ -124,77 +124,84 @@
                 fill: currentColor;
             }
 
-        /* أقسام المنيو */
+        /* حاوية الأقسام الفخمة (شبكة مربعات بارزة) */
         .menu-sections-container {
             background: var(--bg-cream);
             border-radius: 25px 25px 0 0;
-            padding: 25px 15px;
+            padding: 30px 15px;
             color: var(--text-dark);
             margin-top: 15px;
         }
 
         .menu-main-title {
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             color: var(--text-dark);
             margin-bottom: 4px;
             font-weight: bold;
         }
 
         .menu-subtitle {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #8c6d33;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .categories-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* مربعات بجانب بعضها لتبدو فاخرة */
+            gap: 15px;
         }
 
         .category-card {
             background: #fff;
             border: 1px solid #d4c8b0;
-            border-radius: 12px;
-            padding: 12px 15px;
+            border-radius: 16px;
+            overflow: hidden;
             text-decoration: none;
             color: var(--text-dark);
-            font-size: 1.1rem;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 12px;
         }
 
             .category-card:hover {
                 border-color: var(--gold-color);
-                background: rgba(184, 151, 80, 0.05);
-                transform: translateX(-4px);
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(184, 151, 80, 0.25);
             }
 
-        .cat-content {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .cat-img-box {
+            width: 100%;
+            height: 110px;
+            overflow: hidden;
+            background: #f0e6d2;
+            border-bottom: 2px solid var(--gold-color);
         }
 
-        .cat-thumb {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1px solid var(--gold-color);
+            .cat-img-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+        .category-card:hover .cat-img-box img {
+            transform: scale(1.08);
         }
 
-        .category-card span.arrow {
-            color: var(--gold-color);
-            font-size: 1.2rem;
+        .cat-title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-top: 12px;
         }
 
         .footer-note {
-            margin-top: 25px;
+            margin-top: 30px;
             font-size: 0.8rem;
             color: #666;
         }
@@ -207,8 +214,7 @@
         <!-- الهيدر والشعار -->
         <div class="hero-section">
             <div class="logo-frame">
-                <!-- تأكدي أن اسم صورة الشعار عندك logo.png أو غيّريه لو اسم تاني -->
-                <img src="logo.JPG" alt="ركن المحروسة">
+                <img src="logo.png" alt="ركن المحروسة">
             </div>
             <h1 class="restaurant-name">ركن المحروسة</h1>
             <div class="restaurant-slogan">أصل المذاق المصري</div>
@@ -219,25 +225,21 @@
         <div class="contact-section">
             <div class="section-heading">تواصل معنا والطلب</div>
             <div class="contact-grid">
-                <!-- طلب واتس (أيقونة مظبوطة وواضحة) -->
                 <a href="https://wa.me/message/B2Y74745ZTNOP1" target="_blank" class="contact-btn">
                     <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01-1.87-1.87-4.36-2.9-7.01-2.9zm0 1.83c2.18 0 4.23.85 5.77 2.39 1.54 1.54 2.39 3.59 2.39 5.77 0 4.5-3.66 8.16-8.16 8.16-1.51 0-2.95-.42-4.21-1.22l-.3-.19-3.12.82.83-3.04-.2-.31c-.93-1.45-1.42-3.15-1.42-4.9 0-4.5 3.66-8.16 8.16-8.16zm-4.31 4.58c-.17 0-.37.06-.56.25-.19.19-.72.7-.72 1.7 0 1 .73 1.96.83 2.1.1.14 1.42 2.18 3.46 3.06.48.21.86.34 1.15.44.49.16.94.14 1.3-.02.4-.17 1.28-.52 1.46-1.03.18-.51.18-.94.13-1.03-.05-.09-.19-.14-.4-.25-.21-.11-1.28-.63-1.48-.7-.2-.07-.35-.11-.5.11-.15.22-.57.7-.7.84-.13.14-.26.16-.47.05-.21-.11-.89-.33-1.7-1.05-.63-.56-1.05-1.25-1.18-1.46-.13-.21-.01-.33.09-.44.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.03-.28-.02-.39-.05-.11-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48z" /></svg>
                     <span>الطلب واتس</span>
                 </a>
 
-                <!-- اتصل بينا -->
                 <a href="tel:0502287453" class="contact-btn">
                     <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
                     <span>اتصل بينا</span>
                 </a>
 
-                <!-- فيسبوك -->
                 <a href="https://www.facebook.com/share/1LvhrGYe6F/?mibextid=wwXIfr" target="_blank" class="contact-btn">
                     <svg viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.37 14.5 5 15.5 5H18V0h-3.808C10.59 0 9 1.581 9 4.75V8z" /></svg>
                     <span>فيسبوك</span>
                 </a>
 
-                <!-- قناة الواتس -->
                 <a href="https://whatsapp.com/channel/0029VbDDywJ90x2rEu2bOx0m" target="_blank" class="contact-btn">
                     <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.119 1.521 5.85L.416 23.584l5.887-1.139C1.933 23.473 14.167 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.859 0-3.606-.505-5.111-1.385l-.367-.217-3.759.727.731-3.665-.238-.378C2.69 15.39 2.182 13.74 2.182 12c0-5.422 4.414-9.836 9.836-9.836 5.422 0 9.836 4.414 9.836 9.836 0 5.422-4.414 9.818-9.836 9.818z" /></svg>
                     <span>قناة الواتس</span>
@@ -245,106 +247,70 @@
             </div>
         </div>
 
-        <!-- قائمة أقسام المنيو مع صور الأقسام المصغرة -->
+        <!-- شبكة الأقسام الفخمة بالمربعات والصور الواضحة -->
         <div class="menu-sections-container">
             <h2 class="menu-main-title">منيو ركن المحروسة</h2>
             <div class="menu-subtitle">كل اللي نفسك فيه... في مكان واحد ✨</div>
 
             <div class="categories-grid">
                 <a href="mahshy.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="mahshy.png" alt="المحاشي" class="cat-thumb">
-                        <span>المحاشي</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="mahshy.png" alt="المحاشي"></div>
+                    <div class="cat-title">المحاشي</div>
                 </a>
 
                 <a href="mashwyat.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="mashwyat.png" alt="المشويات" class="cat-thumb">
-                        <span>المشويات</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="mashwyat.JPG" alt="المشويات"></div>
+                    <div class="cat-title">المشويات</div>
                 </a>
 
                 <a href="fakhfakhina.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="chicken.png" alt="الدجاج" class="cat-thumb">
-                        <span>الدجاج</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="dajaj.JPG" alt="الدجاج"></div>
+                    <div class="cat-title">الدجاج</div>
                 </a>
 
                 <a href="le7om.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="le7om.png" alt="اللحوم" class="cat-thumb">
-                        <span>اللحوم</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="le7om.JPG" alt="اللحوم"></div>
+                    <div class="cat-title">اللحوم</div>
                 </a>
 
                 <a href="bat-hamam.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="bat-hamam.png" alt="البط والحمام" class="cat-thumb">
-                        <span>البط والحمام</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="bat-hamam.JPG" alt="البط والحمام"></div>
+                    <div class="cat-title">البط والحمام</div>
                 </a>
 
                 <a href="safary.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="safary.png" alt="الإيدامات" class="cat-thumb">
-                        <span>الإيدامات</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="safary.png" alt="الإيدامات"></div>
+                    <div class="cat-title">الإيدامات</div>
                 </a>
 
                 <a href="makrona.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="makrona.png" alt="المكرونة والأرز" class="cat-thumb">
-                        <span>المكرونة والأرز</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="makrona.JPG" alt="المكرونة والأرز"></div>
+                    <div class="cat-title">المكرونة والأرز</div>
                 </a>
 
                 <a href="shawarma.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="shawarma.png" alt="الشاورما" class="cat-thumb">
-                        <span>الشاورما</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="shawarma.JPG" alt="الشاورما"></div>
+                    <div class="cat-title">الشاورما</div>
                 </a>
 
                 <a href="samien.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="samien.png" alt="السمين والتقاطيع" class="cat-thumb">
-                        <span>السمين والتقاطيع</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="sameen.png" alt="السمين والتقاطيع"></div>
+                    <div class="cat-title">السمين والتقاطيع</div>
                 </a>
 
                 <a href="foul.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="foul.png" alt="فول وفلافل" class="cat-thumb">
-                        <span>فول وفلافل</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="foul-falafel.JPG" alt="فول وفلافل"></div>
+                    <div class="cat-title">فول وفلافل</div>
                 </a>
 
                 <a href="sofra.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="sofra.png" alt="أطباق السفرة" class="cat-thumb">
-                        <span>أطباق السفرة</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="sofra.JPG" alt="أطباق السفرة"></div>
+                    <div class="cat-title">أطباق السفرة</div>
                 </a>
 
                 <a href="safary.html" class="category-card">
-                    <div class="cat-content">
-                        <img src="safary.png" alt="علب السفري" class="cat-thumb">
-                        <span>علب السفري</span>
-                    </div>
-                    <span class="arrow">‹</span>
+                    <div class="cat-img-box"><img src="safary.png" alt="علب السفري"></div>
+                    <div class="cat-title">علب السفري</div>
                 </a>
             </div>
 
