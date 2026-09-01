@@ -17,26 +17,37 @@
         }
 
             .menu-table th {
-                background-color: #b89750; /* درجة دهبي أفخم وأرقى */
+                background-color: #b89750;
                 color: #fff;
-                padding: 16px 12px;
-                font-size: 1.25rem;
+                padding: 16px 10px;
+                font-size: 1.2rem;
                 font-weight: bold;
-                letter-spacing: 0.5px;
+                /* خطوط فاصلة رأسية هادية بين خانات الهيدر */
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
             }
 
+                .menu-table th:first-child {
+                    border-left: none;
+                }
+
             .menu-table td {
-                padding: 16px 12px;
+                padding: 15px 10px;
                 border-bottom: 1px solid #d4c8b0;
                 color: #2c1d0c;
-                font-size: 1.15rem;
+                font-size: 1.1rem;
+                /* خطوط فاصلة رأسية خفيفة جداً بين الأعمدة */
+                border-left: 1px solid rgba(212, 200, 176, 0.5);
             }
-                /* تمييز اسم الصنف بخط أثقل شوية */
+
+                .menu-table td:first-child {
+                    border-left: none;
+                }
+
                 .menu-table td:nth-child(2) {
                     font-weight: 600;
                     color: #1a1107;
                 }
-            /* تأثير شيك لما الماوس ييجي على السطر */
+
             .menu-table tr:hover {
                 background-color: rgba(184, 151, 80, 0.08);
                 transition: background-color 0.3s ease;
