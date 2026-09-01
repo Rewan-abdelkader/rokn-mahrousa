@@ -101,42 +101,56 @@
     <script>
         // حطي رابط ملف الجوجل إكسيل هنا بين العلامتين
         const SHEET_URL = "[https://docs.google.com/spreadsheets/d/1msXFrpGok_tc3eRRQaFSdFgTaW69ZwPrcv-yllH0Pgc/edit?usp=sharing]";
-
+ا
         async function loadMenuFromSheet() {
-        try {
-        if(SHEET_URL.includes("رابط_ملف")) return; // لو لسه متمش وضع الرابط
-
-        const csvUrl = SHEET_URL.replace(/edit\?usp=sharing.*$/, "export?format=csv");
-        const response = await fetch(csvUrl);
-        const data = await response.text();
-
-        const rows = data.split('\n').map(row => row.split(','));
         const tbody = document.getElementById('table-body');
+        try {
+        if(SHEET_URL.includes("رابط_ملف") || !SHEET_URL) {
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: #b89750;">الرجاء إضافة رابط الإكسيل الصحيح</td></tr>';
+        return;
+        }
+
+        // تحويل رابط جوجل إكسيل إلى رابط تحميل CSV مباشر
+        let csvUrl = SHEET_URL;
+        if (csvUrl.includes('/edit')) {
+        csvUrl = csvUrl.replace(/\/edit.*$/, '/export?format=csv');
+        }
+
+        const response = await fetch(csvUrl);
+        if (!response.ok) throw new Error('فشل الاتصال بملف البيانات');
+
+        const data = await response.text();
+        const rows = data.split('\n').map(row => row.split(','));
+
         tbody.innerHTML = '';
 
+        let foundItems = false;
         // يبدأ من الصف الثاني لتخطي العناوين
         for (let i = 1; i < rows.length; i++) {
         const cols = rows[i];
-        if (cols.length >= 4 && cols[0].trim() !== '') {
-        // نفترض الترتيب في الإكسيل: القسم، اسم الصنف، السعرات، صغير، كبير
-        // أو حسب ما هنرتب الأعمدة معاكي
+        // التأكد من أن الصف يحتوي على بيانات وأن القسم هو edamat
+        if (cols.length >= 5 && cols[0].trim().toLowerCase().includes('edamat')) {
+        foundItems = true;
         const tr = document.createElement('tr');
         tr.innerHTML = `
-        <td>${cols[2] || '-'}</td>
-        <td>${cols[1] || '-'}</td>
-        <td>${cols[3] || '-'}</td>
-        <td>${cols[4] || '-'}</td>
+        <td>${cols[2] ? cols[2].trim() : '-'}</td>
+        <td>${cols[1] ? cols[1].trim() : '-'}</td>
+        <td>${cols[3] ? cols[3].trim() : '-'}</td>
+        <td>${cols[4] ? cols[4].trim() : '-'}</td>
         `;
         tbody.appendChild(tr);
         }
         }
+
+        if (!foundItems) {
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px;">لم يتم العثور على أصناف مطابقة لهذا القسم</td></tr>';
+        }
+
         } catch (error) {
         console.error("خطأ في جلب البيانات:", error);
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: red;">تأكد من إذن المشاركة العامة لملف الإكسيل</td></tr>';
         }
         }
 
         loadMenuFromSheet();
     </script>
-
-</body>
-</html>
