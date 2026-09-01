@@ -1,58 +1,220 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>فول وفلافل | ركن المحروسة</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فول وفلافل | ركن المحروسة</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 25px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-<link rel="stylesheet" href="style.css">
+            .menu-table th {
+                background-color: #b89750;
+                color: #fff;
+                padding: 16px 10px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+            }
 
+                .menu-table th:first-child {
+                    border-left: none;
+                }
+
+            .menu-table td {
+                padding: 15px 10px;
+                border-bottom: 1px solid #d4c8b0;
+                color: #2c1d0c;
+                font-size: 1.1rem;
+                border-left: 1px solid rgba(212, 200, 176, 0.5);
+                vertical-align: middle;
+            }
+
+                .menu-table td:first-child {
+                    border-left: none;
+                }
+
+                .menu-table td:nth-child(2) {
+                    font-weight: 600;
+                    color: #1a1107;
+                    text-align: right;
+                    padding-right: 20px;
+                }
+
+        .item-desc {
+            display: block;
+            font-size: 0.85rem;
+            color: #8c6d33;
+            margin-top: 4px;
+            font-weight: normal;
+        }
+
+        .menu-table tr:hover {
+            background-color: rgba(184, 151, 80, 0.08);
+            transition: background-color 0.3s ease;
+        }
+
+        .banner-title h1 {
+            font-size: 2.3rem;
+        }
+
+        .menu-title {
+            font-size: 2rem;
+            margin: 25px 0 10px 0;
+            color: #2c1d0c;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="menu-page">
+    <div class="menu-page">
+        <div class="page-banner">
+            <img src="foul-falafel.JPG" alt="فول وفلافل">
+            <div class="banner-title">
+                <h1>فول وفلافل</h1>
+            </div>
+        </div>
 
-<h1>🧆 فول وفلافل</h1>
+        <h2 class="menu-title">قسم فول وفلافل</h2>
 
-<h2>ركن المحروسة</h2>
+        <div class="menu-list">
+            <table class="menu-table">
+                <tr>
+                    <th>السعرات الحرارية</th>
+                    <th>اسم الصنف</th>
+                    <th>السعر</th>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>ساندوتش المحروسة</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>ساندوتش فول</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>ساندوتش طعمية</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>ساندوتش فول بالبيض</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>
+                        ساندوتش ميكس
+                        <span class="item-desc">(فول + طعمية)</span>
+                    </td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>600</td>
+                    <td>ساندوتش بيض مقلي</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>ساندوتش بيض مسلوق</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>ساندوتش حمص</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>ساندوتش شكشوكة</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>350</td>
+                    <td>ساندوتش مسقعة</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>320</td>
+                    <td>ساندوتش جبنة سلطة</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>320</td>
+                    <td>ساندوتش بطاطس صوابع</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>ساندوتش شيبسي</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>360</td>
+                    <td>ساندوتش مهروسة</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>410</td>
+                    <td>ساندوتش كبدة</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>420</td>
+                    <td>ساندوتش طعمية بالحمص</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>520</td>
+                    <td>ساندوتش بالبيض والحمص</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>480</td>
+                    <td>ساندوتش طعمية بالبيض والحمص</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>530</td>
+                    <td>
+                        ساندوتش ديناميت
+                        <span class="item-desc">(فول + طعمية + بيض)</span>
+                    </td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>350</td>
+                    <td>ساندوتش متبل</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>520</td>
+                    <td>ساندوتش بابا غنوج</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>470</td>
+                    <td>ساندوتش بيض بالجبنة</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="menu-list">
-
-<ul>
-
-<li>ساندوتش المحروسة</li>
-<li>ساندوتش فول</li>
-<li>ساندوتش طعمية</li>
-<li>ساندوتش فول بالبيض</li>
-<li>ساندوتش ميكس (فول + طعمية)</li>
-<li>ساندوتش فول بالبيض المقلي</li>
-<li>ساندوتش فول مسلوق</li>
-<li>ساندوتش حمص</li>
-<li>ساندوتش شكشوكة</li>
-<li>ساندوتش مسقعة</li>
-<li>ساندوتش جبنة سلطة</li>
-<li>ساندوتش بطاطس صوابع</li>
-<li>ساندوتش شيبسي</li>
-<li>ساندوتش مهروسة</li>
-<li>ساندوتش كبدة</li>
-<li>ساندوتش طعمية بالحمص</li>
-<li>ساندوتش بالبيض والحمص</li>
-<li>ساندوتش طعمية بالبيض والحمص</li>
-<li>ساندوتش ديناميت</li>
-<li>ساندوتش متبل</li>
-<li>ساندوتش بابا غنوج</li>
-<li>ساندوتش بيض بالجبنة</li>
-
-</ul>
-
-</div>
-
-<a href="index.html" class="back">⬅ العودة للرئيسية</a>
-
-</div>
+        <a href="index.html" class="back">← العودة للرئيسية</a>
+    </div>
 
 </body>
-
 </html>
