@@ -1,52 +1,213 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>أطباق السفرة | ركن المحروسة</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أطباق السفرة | ركن المحروسة</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-<link rel="stylesheet" href="style.css">
+            .menu-table th {
+                background-color: #b89750;
+                color: #fff;
+                padding: 16px 10px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+            }
 
+                .menu-table th:first-child {
+                    border-left: none;
+                }
+
+            .menu-table td {
+                padding: 14px 10px;
+                border-bottom: 1px solid #d4c8b0;
+                color: #2c1d0c;
+                font-size: 1.1rem;
+                border-left: 1px solid rgba(212, 200, 176, 0.5);
+                vertical-align: middle;
+            }
+
+                .menu-table td:first-child {
+                    border-left: none;
+                }
+
+                .menu-table td:nth-child(2) {
+                    font-weight: 600;
+                    color: #1a1107;
+                    text-align: right;
+                    padding-right: 20px;
+                }
+
+            .menu-table tr:hover {
+                background-color: rgba(184, 151, 80, 0.08);
+                transition: background-color 0.3s ease;
+            }
+
+        /* تصميم كارت وجبة المحروسة المميز */
+        .featured-meal {
+            background: linear-gradient(135deg, rgba(184, 151, 80, 0.15), rgba(255, 255, 255, 0.7));
+            border: 2px solid #b89750;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+            .featured-meal h3 {
+                color: #b89750;
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .featured-meal .meal-desc {
+                font-size: 1.05rem;
+                color: #2c1d0c;
+                margin-bottom: 12px;
+                font-weight: 600;
+            }
+
+            .featured-meal .meal-info {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                font-size: 1.1rem;
+                color: #1a1107;
+                font-weight: bold;
+                border-top: 1px dashed #b89750;
+                padding-top: 10px;
+            }
+
+        .banner-title h1 {
+            font-size: 2.3rem;
+        }
+
+        .menu-title {
+            font-size: 2rem;
+            margin: 25px 0 15px 0;
+            color: #2c1d0c;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="menu-page">
+    <div class="menu-page">
+        <div class="page-banner">
+            <img src="sofra.JPG" alt="أطباق السفرة">
+            <div class="banner-title">
+                <h1>أطباق السفرة</h1>
+            </div>
+        </div>
 
-<h1>🍽️ أطباق السفرة</h1>
+        <h2 class="menu-title">أطباق السفرة</h2>
 
-<h2>ركن المحروسة</h2>
+        <!-- وجبة المحروسة المميزة لوحدها في كارت فاخر -->
+        <div class="featured-meal">
+            <h3>⭐ وجبة المحروسة المميزة ⭐</h3>
+            <div class="meal-desc">فول بالزيت الحار + بطاطس + باذنجان + سلطة + خبز + مخلل</div>
+            <div class="meal-info">
+                <span>السعرات: 800 سعرة</span>
+                <span>السعر: 10 جنيه</span>
+            </div>
+        </div>
 
-<div class="menu-list">
+        <!-- جدول باقي الأطباق -->
+        <div class="menu-list">
+            <table class="menu-table">
+                <tr>
+                    <th>السعرات الحرارية</th>
+                    <th>اسم الصنف</th>
+                    <th>السعر</th>
+                </tr>
+                <tr>
+                    <td>300</td>
+                    <td>طبق فول</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>350</td>
+                    <td>طبق حمص</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>طبق متبل</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>250</td>
+                    <td>طبق بابا غنوج</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>300</td>
+                    <td>طبق مسقعة</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>طبق مشكل</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>طبق طعمية بالجبنة</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>250</td>
+                    <td>طبق عدس</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td>طبق جبنة بالسلطة</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>300</td>
+                    <td>طبق شكشوكة</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>طبق مهروسة</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>طبق بيض مقلي</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>طبق باذنجان مخلل</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>طبق مقبلات المحروسة</td>
+                    <td>10</td>
+                </tr>
+            </table>
+        </div>
 
-<ul>
-
-<li>طبق فول</li>
-<li>طبق حمص</li>
-<li>طبق متبل</li>
-<li>طبق بابا غنوج</li>
-<li>طبق مسقعة</li>
-<li>طبق مشكل</li>
-<li>طبق طعمية محشية</li>
-<li>طبق طعمية بالجبنة</li>
-<li>طبق عدس</li>
-<li>طبق جبنة بالسلطة</li>
-<li>طبق شكشوكة</li>
-<li>طبق مهروسة</li>
-<li>طبق بيض مقلي</li>
-<li>طبق باذنجان مخلل</li>
-<li>طبق مشكل المحروسة</li>
-<li>طبق مقبلات المحروسة</li>
-
-</ul>
-
-</div>
-
-<a href="index.html" class="back">⬅ العودة للرئيسية</a>
-
-</div>
+        <a href="index.html" class="back">← العودة للرئيسية</a>
+    </div>
 
 </body>
-
 </html>
