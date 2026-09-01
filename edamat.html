@@ -1,42 +1,130 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الإيدامات | ركن المحروسة</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإيدامات | ركن المحروسة</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 25px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-<link rel="stylesheet" href="style.css">
+            .menu-table th {
+                background-color: #b89750;
+                color: #fff;
+                padding: 16px 10px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+            }
 
+                .menu-table th:first-child {
+                    border-left: none;
+                }
+
+            .menu-table td {
+                padding: 15px 10px;
+                border-bottom: 1px solid #d4c8b0;
+                color: #2c1d0c;
+                font-size: 1.1rem;
+                border-left: 1px solid rgba(212, 200, 176, 0.5);
+            }
+
+                .menu-table td:first-child {
+                    border-left: none;
+                }
+
+                .menu-table td:nth-child(2) {
+                    font-weight: 600;
+                    color: #1a1107;
+                }
+
+            .menu-table tr:hover {
+                background-color: rgba(184, 151, 80, 0.08);
+                transition: background-color 0.3s ease;
+            }
+
+        .banner-title h1 {
+            font-size: 2.3rem;
+        }
+
+        .menu-title {
+            font-size: 2rem;
+            margin: 25px 0 10px 0;
+            color: #2c1d0c;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="menu-page">
+    <div class="menu-page">
+        <div class="page-banner">
+            <img src="edamat.PNG" alt="الإيدامات">
+            <div class="banner-title">
+                <h1>الإيدامات</h1>
+            </div>
+        </div>
 
-<h1>🥘 الإيدامات</h1>
+        <h2 class="menu-title">قسم الإيدامات</h2>
 
-<h2>ركن المحروسة</h2>
+        <div class="menu-list">
+            <table class="menu-table">
+                <tr>
+                    <th>السعرات الحرارية</th>
+                    <th>اسم الصنف</th>
+                    <th>صغير</th>
+                    <th>كبير</th>
+                </tr>
+                <tr>
+                    <td>180</td>
+                    <td>ملوخية</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>300</td>
+                    <td>بطاطس</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>250</td>
+                    <td>لوبيا</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>250</td>
+                    <td>فاصوليا</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>220</td>
+                    <td>خضار مشكلة</td>
+                    <td>4</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>250</td>
+                    <td>بامية</td>
+                    <td>5</td>
+                    <td>7</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="menu-list">
-
-<ul>
-
-<li>ملوخية</li>
-<li>بطاطس</li>
-<li>لوبيا</li>
-<li>فاصوليا</li>
-<li>خضار مشكلة</li>
-<li>بامية</li>
-
-</ul>
-
-</div>
-
-<a href="index.html" class="back">⬅ العودة للرئيسية</a>
-
-</div>
+        <a href="index.html" class="back">← العودة للرئيسية</a>
+    </div>
 
 </body>
-
 </html>
