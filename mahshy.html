@@ -1,42 +1,136 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المحشي | ركن المحروسة</title>
-
+    <title>المحاشي | ركن المحروسة</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 25px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
+            .menu-table th {
+                background-color: #b89750;
+                color: #fff;
+                padding: 16px 10px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+                .menu-table th:first-child {
+                    border-left: none;
+                }
+
+            .menu-table td {
+                padding: 15px 10px;
+                border-bottom: 1px solid #d4c8b0;
+                color: #2c1d0c;
+                font-size: 1.1rem;
+                border-left: 1px solid rgba(212, 200, 176, 0.5);
+            }
+
+                .menu-table td:first-child {
+                    border-left: none;
+                }
+
+                .menu-table td:nth-child(2) {
+                    font-weight: 600;
+                    color: #1a1107;
+                }
+
+            .menu-table tr:hover {
+                background-color: rgba(184, 151, 80, 0.08);
+                transition: background-color 0.3s ease;
+            }
+
+        .banner-title h1 {
+            font-size: 2.3rem;
+        }
+
+        .menu-title {
+            font-size: 2rem;
+            margin: 25px 0 10px 0;
+            color: #2c1d0c;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
 
-<div class="menu-page">
+    <div class="menu-page">
+        <div class="page-banner">
+            <img src="mahshy.PNG" alt="المحاشي">
+            <div class="banner-title">
+                <h1>🥬 المحاشي</h1>
+            </div>
+        </div>
 
-<h1>🥬 المحشي</h1>
+        <h2 class="menu-title">قسم المحاشي</h2>
 
-<h2>ركن المحروسة</h2>
+        <div class="menu-list">
+            <table class="menu-table">
+                <tr>
+                    <th>السعرات الحرارية</th>
+                    <th>اسم الصنف</th>
+                    <th>صغير</th>
+                    <th>كبير</th>
+                </tr>
+                <tr>
+                    <td>300</td>
+                    <td>محشي كرنب</td>
+                    <td>15</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>250</td>
+                    <td>محشي كوسة</td>
+                    <td>15</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>300</td>
+                    <td>محشي باذنجان</td>
+                    <td>15</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>250</td>
+                    <td>محشي ورق عنب</td>
+                    <td>15</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>350</td>
+                    <td>محشي مشكل</td>
+                    <td>15</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>ربع دجاج + محشي</td>
+                    <td>20</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>650</td>
+                    <td>لحم محمر + محشي</td>
+                    <td>35</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="menu-list">
-
-<ul>
-
-<li>محشي كرنب</li>
-<li>محشي كوسة</li>
-<li>محشي باذنجان</li>
-<li>محشي ورق عنب</li>
-<li>محشي مشكل</li>
-<li>ربع دجاج + محشي</li>
-<li>لحم محمر + محشي</li>
-
-</ul>
-
-</div>
-
-<a href="index.html" class="back">⬅ العودة للرئيسية</a>
-
-</div>
+        <a href="index.html" class="back">← العودة للرئيسية</a>
+    </div>
 
 </body>
-
 </html>
