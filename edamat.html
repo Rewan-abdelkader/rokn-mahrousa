@@ -6,62 +6,121 @@
     <title>الإيدامات | ركن المحروسة</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        :root {
+            --primary-color: #1a2e26;
+            --gold-color: #b89750;
+            --bg-cream: #fbf9f4;
+            --text-dark: #2c1d0c;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .menu-page {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(180deg, #1a2e26 0%, #12211b 100%);
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        .page-banner {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--gold-color);
+            margin-bottom: 20px;
+        }
+
+            .page-banner img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .banner-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 15px;
+        }
+
+            .banner-title h1 {
+                color: var(--gold-color);
+                font-size: 2rem;
+                margin: 0;
+            }
+
+        .menu-list {
+            background: var(--bg-cream);
+            border-radius: 20px;
+            padding: 20px 15px;
+            color: var(--text-dark);
+        }
+
+        .menu-title {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
         .menu-table {
             width: 100%;
             border-collapse: collapse;
             text-align: center;
-            margin-top: 25px;
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 8px;
+            background-color: #fff;
+            border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
             .menu-table th {
-                background-color: #b89750;
+                background-color: var(--gold-color);
                 color: #fff;
-                padding: 16px 10px;
-                font-size: 1.2rem;
+                padding: 14px 8px;
+                font-size: 1.1rem;
                 font-weight: bold;
-                border-left: 1px solid rgba(255, 255, 255, 0.3);
             }
-
-                .menu-table th:first-child {
-                    border-left: none;
-                }
 
             .menu-table td {
-                padding: 15px 10px;
+                padding: 12px 8px;
                 border-bottom: 1px solid #d4c8b0;
-                color: #2c1d0c;
-                font-size: 1.1rem;
-                border-left: 1px solid rgba(212, 200, 176, 0.5);
+                color: var(--text-dark);
+                font-size: 1.05rem;
             }
-
-                .menu-table td:first-child {
-                    border-left: none;
-                }
-
-                .menu-table td:nth-child(2) {
-                    font-weight: 600;
-                    color: #1a1107;
-                }
 
             .menu-table tr:hover {
                 background-color: rgba(184, 151, 80, 0.08);
-                transition: background-color 0.3s ease;
             }
 
-        .banner-title h1 {
-            font-size: 2.3rem;
+        .back {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 25px;
+            background: var(--gold-color);
+            color: #1a2e26;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
 
-        .menu-title {
-            font-size: 2rem;
-            margin: 25px 0 10px 0;
-            color: #2c1d0c;
-            text-align: center;
-            font-weight: bold;
-        }
+            .back:hover {
+                background: #fff;
+                transform: translateY(-2px);
+            }
     </style>
 </head>
 <body>
@@ -74,21 +133,54 @@
             </div>
         </div>
 
-        <h2 class="menu-title">قسم الإيدامات</h2>
-
         <div class="menu-list">
-            <table class="menu-table" id="dynamic-menu-table">
+            <h2 class="menu-title">قائمة الإيدامات</h2>
+
+            <table class="menu-table">
                 <thead>
                     <tr>
-                        <th>السعرات الحرارية</th>
-                        <th>اسم الصنف</th>
+                        <th>الصنف</th>
+                        <th>السعرات</th>
                         <th>صغير</th>
                         <th>كبير</th>
                     </tr>
                 </thead>
-                <tbody id="table-body">
+                <tbody>
                     <tr>
-                        <td colspan="4" style="text-align:center; padding: 20px;">جاري تحميل الأسعار المحدثة... ✨</td>
+                        <td>ملوخية</td>
+                        <td>180</td>
+                        <td>4</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>بطاطس</td>
+                        <td>300</td>
+                        <td>4</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>لوبيا</td>
+                        <td>250</td>
+                        <td>4</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>فاصوليا</td>
+                        <td>250</td>
+                        <td>4</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>خضار مشكلة</td>
+                        <td>220</td>
+                        <td>4</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>بامية</td>
+                        <td>250</td>
+                        <td>5</td>
+                        <td>7</td>
                     </tr>
                 </tbody>
             </table>
@@ -97,66 +189,5 @@
         <a href="index.html" class="back">← العودة للرئيسية</a>
     </div>
 
-    <!-- سكريبت جلب البيانات أوتوماتيك من ملف الإكسيل على جوجل -->
-    } catch (error) {
-    console.error("خطأ في جلب البيانات:", error);
-    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: red;">تأكد من إذن المشاركة العامة لملف الإكسيل</td></tr>';
-    }
-    }
-
-    loadMenuFromSheet();
-                       <script>
-                           const SHEET_URL = "https://docs.google.com/spreadsheets/d/1msXFrPgok_tc3eRRQAfsDfGTaW69ZWprcv-yllH0Pgc/edit?usp=sharing";
-
-                           async function loadMenuFromSheet() {
-                           const tbody = document.getElementById('table-body');
-                           try {
-                           if (!SHEET_URL || SHEET_URL.includes("رابط_ملف")) {
-                           tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: #b89750;">الرجاء إضافة رابط الإكسيل الصحيح</td></tr>';
-                           return;
-                           }
-
-                           let csvUrl = SHEET_URL;
-                           if (csvUrl.includes('/edit')) {
-                           csvUrl = csvUrl.replace(/\/edit.*$/, '/export?format=csv');
-                           }
-
-                           const response = await fetch(csvUrl);
-                           if (!response.ok) throw new Error('فشل جلب البيانات');
-
-                           const data = await response.text();
-                           const rows = data.split(/\r?\n/);
-                           tbody.innerHTML = '';
-
-                           let foundItems = false;
-                           for (let i = 1; i < rows.length; i++) {
-                           const row = rows[i].trim();
-                           if (!row) continue;
-
-                           const cols = row.split(',').map(item => item.replace(/^["']|["']$/g, '').trim());
-
-                           if (cols.length >= 5 && cols[0].toLowerCase() === 'edamat') {
-                           foundItems = true;
-                           const tr = document.createElement('tr');
-                           tr.innerHTML = `
-                           <td>${cols[2] || '-'}</td>
-                           <td>${cols[1] || '-'}</td>
-                           <td>${cols[3] || '-'}</td>
-                           <td>${cols[4] || '-'}</td>
-                           `;
-                           tbody.appendChild(tr);
-                           }
-                           }
-
-                           if (!foundItems) {
-                           tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px;">لا توجد أصناف مطابقة</td></tr>';
-                           }
-
-                           } catch (error) {
-                           console.error("خطأ:", error);
-                           tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: red;">تأكد من إذن المشاركة العامة لملف الإكسيل</td></tr>';
-                           }
-                           }
-
-                           loadMenuFromSheet();
-                       </script>
+</body>
+</html>
