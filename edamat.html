@@ -105,62 +105,58 @@
     }
 
     loadMenuFromSheet();
-    </script>
-    <script>
-        // حطي رابط ملف الإكسيل هنا
-        const SHEET_URL = "https://docs.google.com/spreadsheets/d/1msXFrpGok_tc3eRRQaFSdFgTaW69ZwPrcv-yllH0Pgc/edit?usp=sharing";
+                       <script>
+                           const SHEET_URL = "https://docs.google.com/spreadsheets/d/1msXFrPgok_tc3eRRQAfsDfGTaW69ZWprcv-yllH0Pgc/edit?usp=sharing";
 
-        async function loadMenuFromSheet() {
-        const tbody = document.getElementById('table-body');
-        try {
-        if(SHEET_URL.includes("رابط_ملف") || !SHEET_URL) {
-        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: #b89750;">الرجاء إضافة رابط الإكسيل الصحيح</td></tr>';
-        return;
-        }
+                           async function loadMenuFromSheet() {
+                           const tbody = document.getElementById('table-body');
+                           try {
+                           if (!SHEET_URL || SHEET_URL.includes("رابط_ملف")) {
+                           tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: #b89750;">الرجاء إضافة رابط الإكسيل الصحيح</td></tr>';
+                           return;
+                           }
 
-        let csvUrl = SHEET_URL;
-        if (csvUrl.includes('/edit')) {
-        csvUrl = csvUrl.replace(/\/edit.*$/, '/export?format=csv');
-        }
+                           let csvUrl = SHEET_URL;
+                           if (csvUrl.includes('/edit')) {
+                           csvUrl = csvUrl.replace(/\/edit.*$/, '/export?format=csv');
+                           }
 
-        const response = await fetch(csvUrl);
-        const data = await response.text();
+                           const response = await fetch(csvUrl);
+                           if (!response.ok) throw new Error('فشل جلب البيانات');
 
-        // تقسيم السطور بشكل صحيح مع مراعاة علامات التنسيق
-        const rows = data.split(/\r?\n/);
-        tbody.innerHTML = '';
+                           const data = await response.text();
+                           const rows = data.split(/\r?\n/);
+                           tbody.innerHTML = '';
 
-        let foundItems = false;
-        for (let i = 1; i < rows.length; i++) {
-        const row = rows[i].trim();
-        if (!row) continue;
+                           let foundItems = false;
+                           for (let i = 1; i < rows.length; i++) {
+                           const row = rows[i].trim();
+                           if (!row) continue;
 
-        // تحليل الأعمدة بفصل الفواصل بدقة
-        const cols = row.split(',').map(item => item.replace(/^["']|["']$/g, '').trim());
+                           const cols = row.split(',').map(item => item.replace(/^["']|["']$/g, '').trim());
 
-        // التأكد أن الصف يخص قسم edamat وأن البيانات كاملة
-        if (cols.length >= 5 && cols[0].toLowerCase() === 'edamat') {
-        foundItems = true;
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-        <td>${cols[2] || '-'}</td>
-        <td>${cols[1] || '-'}</td>
-        <td>${cols[3] || '-'}</td>
-        <td>${cols[4] || '-'}</td>
-        `;
-        tbody.appendChild(tr);
-        }
-        }
+                           if (cols.length >= 5 && cols[0].toLowerCase() === 'edamat') {
+                           foundItems = true;
+                           const tr = document.createElement('tr');
+                           tr.innerHTML = `
+                           <td>${cols[2] || '-'}</td>
+                           <td>${cols[1] || '-'}</td>
+                           <td>${cols[3] || '-'}</td>
+                           <td>${cols[4] || '-'}</td>
+                           `;
+                           tbody.appendChild(tr);
+                           }
+                           }
 
-        if (!foundItems) {
-        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px;">لا توجد أصناف مطابقة</td></tr>';
-        }
+                           if (!foundItems) {
+                           tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px;">لا توجد أصناف مطابقة</td></tr>';
+                           }
 
-        } catch (error) {
-        console.error("خطأ:", error);
-        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: red;">تعذر تحميل البيانات، تأكد من الرابط</td></tr>';
-        }
-        }
+                           } catch (error) {
+                           console.error("خطأ:", error);
+                           tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding: 20px; color: red;">تأكد من إذن المشاركة العامة لملف الإكسيل</td></tr>';
+                           }
+                           }
 
-        loadMenuFromSheet();
-    </script>
+                           loadMenuFromSheet();
+                       </script>
