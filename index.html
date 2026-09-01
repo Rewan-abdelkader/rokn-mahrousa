@@ -1,198 +1,305 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ركن المحروسة</title>
-
+    <title>ركن المحروسة | أصل المذاق المصري</title>
     <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a2e26;
+            --gold-color: #b89750;
+            --gold-light: #d4af37;
+            --bg-cream: #fbf9f4;
+            --text-dark: #2c1d0c;
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        body {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
+        .home-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(180deg, #1a2e26 0%, #12211b 100%);
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        /* قسم الهيدر والشعار */
+        .hero-section {
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .logo-frame {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            border: 3px solid var(--gold-color);
+            padding: 3px;
+            box-shadow: 0 5px 20px rgba(184, 151, 80, 0.4);
+            background: #112019;
+        }
+
+            .logo-frame img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+        .restaurant-name {
+            font-size: 2.5rem;
+            color: var(--gold-color);
+            margin: 10px 0 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .restaurant-slogan {
+            font-size: 1.1rem;
+            color: #d4c8b0;
+            margin-bottom: 15px;
+        }
+
+        .divider {
+            width: 100px;
+            height: 2px;
+            background: var(--gold-color);
+            margin: 15px auto;
+            opacity: 0.6;
+        }
+
+        /* صندوق التواصل الفخم */
+        .contact-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(184, 151, 80, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 25px 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .section-heading {
+            font-size: 1.3rem;
+            color: var(--gold-color);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .contact-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--gold-color);
+            border-radius: 12px;
+            padding: 12px 5px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+            .contact-btn:hover {
+                background: var(--gold-color);
+                color: #1a2e26;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(184, 151, 80, 0.3);
+            }
+
+            .contact-btn svg {
+                width: 24px;
+                height: 24px;
+                fill: currentColor;
+            }
+
+        /* قسم أقسام المنيو */
+        .menu-sections-container {
+            background: var(--bg-cream);
+            border-radius: 25px 25px 0 0;
+            padding: 30px 20px;
+            color: var(--text-dark);
+            margin-top: 20px;
+        }
+
+        .menu-main-title {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .menu-subtitle {
+            font-size: 0.95rem;
+            color: #8c6d33;
+            margin-bottom: 25px;
+        }
+
+        .categories-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .category-card {
+            background: #fff;
+            border: 1px solid #d4c8b0;
+            border-radius: 12px;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+        }
+
+            .category-card:hover {
+                border-color: var(--gold-color);
+                background: rgba(184, 151, 80, 0.05);
+                transform: translateX(-5px);
+                box-shadow: 0 5px 15px rgba(184, 151, 80, 0.15);
+            }
+
+            .category-card span.arrow {
+                color: var(--gold-color);
+                font-size: 1.3rem;
+            }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #666;
+            padding-bottom: 10px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
+    <div class="home-container">
 
-    <img src="images/logo.JPG" class="header-bg">
+        <!-- الهيدر والشعار -->
+        <div class="hero-section">
+            <div class="logo-frame">
+                <!-- استبدلي logo.png باسم صورة الشعار الفعلي لديكِ -->
+                <img src="logo.png" alt="ركن المحروسة">
+            </div>
+            <h1 class="restaurant-name">ركن المحروسة</h1>
+            <div class="restaurant-slogan">أصل المذاق المصري</div>
+            <div class="divider"></div>
+        </div>
 
-    <div class="overlay"></div>
+        <!-- صندوق التواصل السريع -->
+        <div class="contact-section">
+            <div class="section-heading">تواصل معنا والطلب</div>
+            <div class="contact-grid">
+                <!-- زر الواتساب للطلب -->
+                <a href="https://wa.me/message/B2Y74745ZTNOP1" target="_blank" class="contact-btn">
+                    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448zM12 21.385c1.757 0 3.45-.461 4.942-1.334l-.353-.207-2.946-1.728-.352.204c-1.229.711-2.651 1.087-4.112 1.087-4.664 0-8.463-3.799-8.465-8.465-.002-4.665 3.797-8.465 8.465-8.465 4.666 0 8.465 3.799 8.467 8.465.001 1.461-.376 2.883-1.087 4.112l-.204.352 1.728 2.946.207.353c.873-1.492 1.334-3.185 1.334-4.942 0-5.787-4.708-10.495-10.495-10.495-5.787 0-10.495 4.708-10.495 10.495 0 5.787 4.708 10.495 10.495 10.495zm5.748-7.904c-.314-.157-1.857-.917-2.144-1.022-.287-.105-.496-.157-.704.157-.208.314-.805 1.022-.987 1.232-.183.21-.365.235-.679.078-.314-.157-1.328-.489-2.531-1.562-.936-.834-1.568-1.864-1.751-2.178-.183-.314-.02-.484.138-.641.141-.141.314-.365.471-.547.157-.183.209-.314.314-.523.105-.209.052-.392-.026-.547-.078-.157-.704-1.696-.965-2.324-.254-.606-.514-.524-.704-.534-.183-.009-.392-.009-.601-.009s-.548.078-.836.392c-.288.314-1.1 1.074-1.1 2.622 0 1.548 1.127 3.041 1.284 3.25 1.127 1.548 3.559 5.378 5.143 7.535 2.153 2.952 2.595 2.65 3.06 2.484.465-.166 1.857-.76 2.118-1.495.261-.735.261-1.366.183-1.495-.079-.13-.288-.209-.602-.366z" /></svg>
+                    <span>الطلب واتس</span>
+                </a>
 
-    <div class="header-content">
+                <!-- زر الاتصال التليفوني -->
+                <a href="tel:0502287453" class="contact-btn">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+                    <span>اتصل بينا</span>
+                </a>
 
-        <img class="logo" src="images/logo.JPG">
+                <!-- زر صفحة الفيسبوك -->
+                <a href="https://www.facebook.com/share/1LvhrGYe6F/?mibextid=wwXIfr" target="_blank" class="contact-btn">
+                    <svg viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.37 14.5 5 15.5 5H18V0h-3.808C10.59 0 9 1.581 9 4.75V8z" /></svg>
+                    <span>فيسبوك</span>
+                </a>
 
-        <h1>ركن المحروسة</h1>
+                <!-- زر قناة الواتساب -->
+                <a href="https://whatsapp.com/channel/0029VbDDywJ90x2rEu2bOx0m" target="_blank" class="contact-btn">
+                    <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.119 1.521 5.85L.416 23.584l5.887-1.139C1.933 23.473 14.167 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.859 0-3.606-.505-5.111-1.385l-.367-.217-3.759.727.731-3.665-.238-.378C2.69 15.39 2.182 13.74 2.182 12c0-5.422 4.414-9.836 9.836-9.836 5.422 0 9.836 4.414 9.836 9.836 0 5.422-4.414 9.818-9.836 9.818z" /></svg>
+                    <span>قناة الواتس</span>
+                </a>
+            </div>
+        </div>
 
-       <p>أصل المذاق المصري</p>
+        <!-- قائمة أقسام المنيو -->
+        <div class="menu-sections-container">
+            <h2 class="menu-main-title">منيو ركن المحروسة</h2>
+            <div class="menu-subtitle">كل اللي نفسك فيه... في مكان واحد ✨</div>
 
-<div class="gold-line"></div>
+            <div class="categories-grid">
+                <a href="mahshy.html" class="category-card">
+                    <span>🥬 المحاشي</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="mashwyat.html" class="category-card">
+                    <span>🥩 المشويات</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="dajaj.html" class="category-card">
+                    <span>🍗 الدجاج</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="le7om.html" class="category-card">
+                    <span>🍖 اللحوم</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="bat-hamam.html" class="category-card">
+                    <span>🦆 البط والحمام</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="safary.html" class="category-card">
+                    <span>🍲 الإيدامات</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="makrona.html" class="category-card">
+                    <span>🍝 المكرونة والأرز</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="shawarma.html" class="category-card">
+                    <span>🌯 الشاورما</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="sameen.html" class="category-card">
+                    <span>🔥 السمين والتقاطيع</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="foul-falafel.html" class="category-card">
+                    <span>🧆 فول وفلافل</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="sofra.html" class="category-card">
+                    <span>🍽️ أطباق السفرة</span>
+                    <span class="arrow">‹</span>
+                </a>
+                <a href="safary.html" class="category-card">
+                    <span>📦 علب السفري</span>
+                    <span class="arrow">‹</span>
+                </a>
+            </div>
 
-<div class="header-phone">
-📞 0502287453
-</div>
-</header>
-<section class="contact-box">
+            <div class="footer-note">
+                ركن المحروسة © 2026 - جميع الحقوق محفوظة
+            </div>
+        </div>
 
-<h3>📲 تواصل معنا</h3>
-
-<div class="social-links">
-
-<a href="tel:0502287453" class="social-item">
-<div class="icon">
-<i class="fa-solid fa-phone phone-icon"></i>
-</div>
-<span>اتصل بنا</span>
-</a>
-
-<a href="https://wa.me/message/B2Y74745ZTNOP1" class="social-item">
-<div class="icon">
-<i class="fa-brands fa-whatsapp whatsapp-icon"></i>
-</div>
-<span>واتساب</span>
-</a>
-
-<a href="https://www.facebook.com/share/1Bv7awPzqa/?mibextid=wwXIfr" class="social-item">
-<div class="icon">
-<i class="fa-brands fa-facebook-f facebook-icon"></i>
-</div>
-<span>فيسبوك</span>
-</a>
-
-<a href="https://whatsapp.com/channel/0029VbDDywJ90x2rEu2bOx0m" class="social-item">
-    <div class="icon">
-        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
     </div>
-    <span>قناة الواتساب</span>
-</a>
-
-</div> 
-
-</section>
-
-<section class="title">
-    <h2>🍽️ منيو ركن المحروسة</h2>
-    <p class="subtitle">
-        كل اللي نفسك فيه... في مكان واحد ✨
-    </p>
-</section>
-
-<section class="categories">
-
-    <div class="card">
-
-<a href="tawagen.html">
-
-<img src="images/tawagen.PNG">
-
-<span>طواجن</span>
-
-</a>
-
-</div>
-
-     <div class="card">
-
-<a href="mashwyat.html">
-
-<img src="images/mashwyat.JPG">
-
-<span>مشويات</span>
-
-</a>
-
-</div>
-<div class="card">
-    <a href="mahshy.html">
-      <img src="images/mahshy.PNG">
-        <span>محشي</span>
-    </a>
-</div>
-
-     <div class="card">
-    <a href="koshary.html">
-       <img src="images/koshary.JPG">
-        <span>كشري</span>
-    </a>
-</div>
-<div class="card">
-    <a href="dajaj.html">
-       <img src="images/dajaj.JPG">
-        <span>دجاج</span>
-    </a>
-</div>
-     <div class="card">
-    <a href="le7om.html">
-        <img src="images/le7om.JPG">
-        <span>لحوم</span>
-    </a>
-</div>
-
-     <div class="card">
-    <a href="bat-hamam.html">
-        <img src="images/bat-hamam.JPG">
-        <span>البط والحمام</span>
-    </a>
-</div>
-
-    <div class="card">
-    <a href="edamat.html">
-       <img src="images/edamat.PNG">
-        <span>الإيدامات</span>
-    </a>
-</div>
-
-     <div class="card">
-    <a href="makrona.html">
-        <img src="images/makrona.JPG">
-        <span>المكرونة والأرز</span>
-    </a>
-</div>
-
-    <div class="card">
-    <a href="shawarma.html">
-        <img src="images/shawarma.JPG">
-        <span>الشاورما</span>
-    </a>
-</div>
-
-      <div class="card">
-   <a href="sameen.html">
-      <img src="images/sameen.PNG">
-        <span>السمين والتقاطيع</span>
-    </a>
-</div>
-
-    <div class="card">
-    <a href="foul-falafel.html">
-      <img src="images/foul-falafel.JPG">
-        <span>فول وفلافل</span>
-    </a>
-</div>
-
-      <div class="card">
-    <a href="sofra.html">
-        <img src="images/sofra.JPG">
-        <span>أطباق السفرة</span>
-    </a>
-</div>
-
-      <div class="card">
-    <a href="safary.html">
-      <img src="images/safary.PNG">
-        <span>علب السفري</span>
-    </a>
-</div>
-
-  
-
-</section>
-
-<script src="script.js"></script>
 
 </body>
 </html>
