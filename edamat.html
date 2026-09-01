@@ -77,54 +77,66 @@
         <h2 class="menu-title">قسم الإيدامات</h2>
 
         <div class="menu-list">
-            <table class="menu-table">
-                <tr>
-                    <th>السعرات الحرارية</th>
-                    <th>اسم الصنف</th>
-                    <th>صغير</th>
-                    <th>كبير</th>
-                </tr>
-                <tr>
-                    <td>180</td>
-                    <td>ملوخية</td>
-                    <td>4</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>300</td>
-                    <td>بطاطس</td>
-                    <td>4</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>250</td>
-                    <td>لوبيا</td>
-                    <td>4</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>250</td>
-                    <td>فاصوليا</td>
-                    <td>4</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>220</td>
-                    <td>خضار مشكلة</td>
-                    <td>4</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>250</td>
-                    <td>بامية</td>
-                    <td>5</td>
-                    <td>7</td>
-                </tr>
+            <table class="menu-table" id="dynamic-menu-table">
+                <thead>
+                    <tr>
+                        <th>السعرات الحرارية</th>
+                        <th>اسم الصنف</th>
+                        <th>صغير</th>
+                        <th>كبير</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td colspan="4" style="text-align:center; padding: 20px;">جاري تحميل الأسعار المحدثة... ✨</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
 
         <a href="index.html" class="back">← العودة للرئيسية</a>
     </div>
+
+    <!-- سكريبت جلب البيانات أوتوماتيك من ملف الإكسيل على جوجل -->
+    <script>
+        // حطي رابط ملف الجوجل إكسيل هنا بين العلامتين
+        const SHEET_URL = "[https://docs.google.com/spreadsheets/d/1msXFrpGok_tc3eRRQaFSdFgTaW69ZwPrcv-yllH0Pgc/edit?usp=sharing]";
+
+        async function loadMenuFromSheet() {
+        try {
+        if(SHEET_URL.includes("رابط_ملف")) return; // لو لسه متمش وضع الرابط
+
+        const csvUrl = SHEET_URL.replace(/edit\?usp=sharing.*$/, "export?format=csv");
+        const response = await fetch(csvUrl);
+        const data = await response.text();
+
+        const rows = data.split('\n').map(row => row.split(','));
+        const tbody = document.getElementById('table-body');
+        tbody.innerHTML = '';
+
+        // يبدأ من الصف الثاني لتخطي العناوين
+        for (let i = 1; i < rows.length; i++) {
+        const cols = rows[i];
+        if (cols.length >= 4 && cols[0].trim() !== '') {
+        // نفترض الترتيب في الإكسيل: القسم، اسم الصنف، السعرات، صغير، كبير
+        // أو حسب ما هنرتب الأعمدة معاكي
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+        <td>${cols[2] || '-'}</td>
+        <td>${cols[1] || '-'}</td>
+        <td>${cols[3] || '-'}</td>
+        <td>${cols[4] || '-'}</td>
+        `;
+        tbody.appendChild(tr);
+        }
+        }
+        } catch (error) {
+        console.error("خطأ في جلب البيانات:", error);
+        }
+        }
+
+        loadMenuFromSheet();
+    </script>
 
 </body>
 </html>
