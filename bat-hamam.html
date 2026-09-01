@@ -1,40 +1,118 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>البط والحمام | ركن المحروسة</title>
-
     <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 25px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
+            .menu-table th {
+                background-color: #b89750;
+                color: #fff;
+                padding: 16px 10px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+                .menu-table th:first-child {
+                    border-left: none;
+                }
+
+            .menu-table td {
+                padding: 15px 10px;
+                border-bottom: 1px solid #d4c8b0;
+                color: #2c1d0c;
+                font-size: 1.1rem;
+                border-left: 1px solid rgba(212, 200, 176, 0.5);
+            }
+
+                .menu-table td:first-child {
+                    border-left: none;
+                }
+
+                .menu-table td:nth-child(2) {
+                    font-weight: 600;
+                    color: #1a1107;
+                }
+
+            .menu-table tr:hover {
+                background-color: rgba(184, 151, 80, 0.08);
+                transition: background-color 0.3s ease;
+            }
+
+        .banner-title h1 {
+            font-size: 2.3rem;
+        }
+
+        .menu-title {
+            font-size: 2rem;
+            margin: 25px 0 10px 0;
+            color: #2c1d0c;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
 
-<div class="menu-page">
+    <div class="menu-page">
+        <div class="page-banner">
+            <img src="bat-hamam.JPG" alt="البط والحمام">
+            <div class="banner-title">
+                <h1>البط والحمام</h1>
+            </div>
+        </div>
 
-<h1>🦆 البط والحمام</h1>
+        <h2 class="menu-title">قسم البط والحمام</h2>
 
-<h2>ركن المحروسة</h2>
+        <div class="menu-list">
+            <table class="menu-table">
+                <tr>
+                    <th>السعرات الحرارية</th>
+                    <th>اسم الصنف</th>
+                    <th>السعر</th>
+                </tr>
+                <tr>
+                    <td>600</td>
+                    <td>بط محمر ورك</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>بط محمر صدر</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>700</td>
+                    <td>نص حبة بط</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>980</td>
+                    <td>حبة بط</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>حبة حمام محشي <span style="font-size: 0.85rem; color: #665544; display: block; font-weight: normal;">(رز خلطة)</span></td>
+                    <td>35</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="menu-list">
-
-<ul>
-
-<li>بط محمر ورك</li>
-<li>بط محمر صدر</li>
-<li>نصف حبة بط</li>
-<li>حبة بط كاملة</li>
-<li>حبة حمام محشي رز خلط</li>
-
-</ul>
-
-</div>
-
-<a href="index.html" class="back">⬅ العودة للرئيسية</a>
-
-</div>
+        <a href="index.html" class="back">← العودة للرئيسية</a>
+    </div>
 
 </body>
-
 </html>
