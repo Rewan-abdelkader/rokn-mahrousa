@@ -1,41 +1,130 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اللحوم | ركن المحروسة</title>
-
     <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 25px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
+            .menu-table th {
+                background-color: #b89750;
+                color: #fff;
+                padding: 16px 10px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-left: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+                .menu-table th:first-child {
+                    border-left: none;
+                }
+
+            .menu-table td {
+                padding: 15px 10px;
+                border-bottom: 1px solid #d4c8b0;
+                color: #2c1d0c;
+                font-size: 1.1rem;
+                border-left: 1px solid rgba(212, 200, 176, 0.5);
+            }
+
+                .menu-table td:first-child {
+                    border-left: none;
+                }
+
+                .menu-table td:nth-child(2) {
+                    font-weight: 600;
+                    color: #1a1107;
+                }
+
+            .menu-table tr:hover {
+                background-color: rgba(184, 151, 80, 0.08);
+                transition: background-color 0.3s ease;
+            }
+
+        .banner-title h1 {
+            font-size: 2.3rem;
+        }
+
+        .menu-title {
+            font-size: 2rem;
+            margin: 25px 0 10px 0;
+            color: #2c1d0c;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
 
-<div class="menu-page">
+    <div class="menu-page">
+        <div class="page-banner">
+            <img src="le7om.JPG" alt="اللحوم">
+            <div class="banner-title">
+                <h1>اللحوم</h1>
+            </div>
+        </div>
 
-<h1>🥩 اللحوم</h1>
+        <h2 class="menu-title">قسم اللحوم</h2>
 
-<h2>ركن المحروسة</h2>
+        <div class="menu-list">
+            <table class="menu-table">
+                <tr>
+                    <th>السعرات الحرارية</th>
+                    <th>اسم الصنف</th>
+                    <th>صغير</th>
+                    <th>كبير</th>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>لحم سادة</td>
+                    <td>-</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>لحم مسلوق</td>
+                    <td>-</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>لحم محمر</td>
+                    <td>-</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>650</td>
+                    <td>ورقة لحم</td>
+                    <td>-</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>لحم استيك</td>
+                    <td>-</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>750</td>
+                    <td>موزة ضاني</td>
+                    <td>35</td>
+                    <td>45</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="menu-list">
-
-<ul>
-
-<li>لحم مسلوق</li>
-<li>لحم محمر</li>
-<li>ورقة لحم</li>
-<li>لحم استيك</li>
-<li>موزة ضاني</li>
-<li>لحم بورق بصل إسكندراني</li>
-
-</ul>
-
-</div>
-
-<a href="index.html" class="back">⬅ العودة للرئيسية</a>
-
-</div>
+        <a href="index.html" class="back">← العودة للرئيسية</a>
+    </div>
 
 </body>
-
 </html>
