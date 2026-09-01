@@ -1,63 +1,157 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الطواجن | ركن المحروسة</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الطواجن | ركن المحروسة</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 25px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-<link rel="stylesheet" href="style.css">
+            .menu-table th {
+                background-color: #b89750; /* درجة دهبي أفخم وأرقى */
+                color: #fff;
+                padding: 16px 12px;
+                font-size: 1.25rem;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+            }
+
+            .menu-table td {
+                padding: 16px 12px;
+                border-bottom: 1px solid #d4c8b0;
+                color: #2c1d0c;
+                font-size: 1.15rem;
+            }
+                /* تمييز اسم الصنف بخط أثقل شوية */
+                .menu-table td:nth-child(2) {
+                    font-weight: 600;
+                    color: #1a1107;
+                }
+            /* تأثير شيك لما الماوس ييجي على السطر */
+            .menu-table tr:hover {
+                background-color: rgba(184, 151, 80, 0.08);
+                transition: background-color 0.3s ease;
+            }
+
+        .banner-title h1 {
+            font-size: 2.3rem;
+        }
+
+        .menu-title {
+            font-size: 2rem;
+            margin: 25px 0 10px 0;
+            color: #2c1d0c;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="menu-page">
+    <div class="menu-page">
+        <div class="page-banner">
+            <img src="tawagen.PNG" alt="الطواجن">
+            <div class="banner-title">
+                <h1>🍲 الطواجن</h1>
+            </div>
+        </div>
 
-<div class="page-banner">
+        <h2 class="menu-title">الطواجن</h2>
 
-<img src="tawagen.PNG" alt="الطواجن">
+        <div class="menu-list">
+            <table class="menu-table">
+                <tr>
+                    <th>السعرات الحرارية</th>
+                    <th>اسم الصنف</th>
+                    <th>كبير</th>
+                    <th>صغير</th>
+                </tr>
+                <tr>
+                    <td>650</td>
+                    <td>طاجن المحروسة</td>
+                    <td>50</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>600</td>
+                    <td>طاجن موزة</td>
+                    <td>45</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>طاجن كوارع</td>
+                    <td>-</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>600</td>
+                    <td>طاجن عكاوي</td>
+                    <td>-</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>طاجن لحم بالفاصوليا</td>
+                    <td>28</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>طاجن لحم بالبامية</td>
+                    <td>28</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>طاجن لحم بالخضار</td>
+                    <td>28</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>550</td>
+                    <td>طاجن لحم بلسان العصفور</td>
+                    <td>28</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>650</td>
+                    <td>طاجن موزة بورق العنب</td>
+                    <td>50</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>600</td>
+                    <td>طاجن كوارع بورق العنب</td>
+                    <td>45</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>650</td>
+                    <td>طاجن عكاوي بورق العنب</td>
+                    <td>50</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>600</td>
+                    <td>طاجن رز معمر باللحمة</td>
+                    <td>30</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
 
-<div class="banner-title">
-<h1>🍲 الطواجن</h1>
-</div>
-
-</div>
-<h2 class="menu-title">الطواجن</h2>
-<div class="menu-list">
-
-<ul>
-
-<li>
-    <span class="item-price">---</span>
-    <span class="item-name">طاجن المحروسة</span>
-</li>
-<li>
-<span>طاجن موزه</span>
-<span class="price"></span>
-</li>
-<li>
-<span>طاجن كوارع</span>
-<span class="price"></span>
-</li>
-<li>طاجن عكاوي</li>
-<li>طاجن لحم بالبشاميل</li>
-<li>طاجن لحم بالفاصوليا</li>
-<li>طاجن لحم باللوبيا</li>
-<li>طاجن لحم بالخضار</li>
-<li>طاجن لحم بلسان العصفور</li>
-<li>طاجن موزة بورق العنب</li>
-<li>طاجن كوارع بورق العنب</li>
-<li>طاجن عكاوي بورق العنب</li>
-<li>طاجن رز معمر باللحمة</li>
-
-</ul>
-
-</div>
-
-<a href="index.html" class="back">⬅ العودة للرئيسية</a>
-
-</div>
+        <a href="index.html" class="back">← العودة للرئيسية</a>
+    </div>
 
 </body>
-
 </html>
